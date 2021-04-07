@@ -1,0 +1,62 @@
+:root {
+    --purple: #682ae9;
+    --light: #dbdbdb;
+    --header-link: #dbdbdb;
+    --header-link-hover: #682ae9;
+    --header-link-hover-icon: #dbdbdb;
+    --header-link-active: #555;
+    --std-color: #dbdbdb;
+    --bg: #0e1212;
+    --bg-rgb: 14,18,18;
+    --bgLight: radial-gradient(var(--bg),transparent,var(--purple) 130%);
+    --gray: grey;
+    --comment: #555;
+}
+
+.bg-nav{
+    background-color: var(--bgLight);
+}
+
+.my-nav-link{
+    color: var(--header-link);
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.my-nav-link :hover{
+    color:var(--header-link-hover)
+}
+
+.my-nav-link.active{
+    color:var(--header-link-active)
+}
+.my-nav-link.active:hover{
+    color:var(--header-link-hover)
+}
+.my-nav-icon{
+    color: var(--purple);
+}
+
+.my-nav-icon :hover{
+    color: var(--header-link-hover-icon)
+}
+
+.my-nav-brand-color{
+    color:var(--purple)
+}
+
+.text-light{
+    color:var(--light)
+}
+
+.text-primary{
+    color:var(--purple)
+}
+
+.text-std{
+    color:var(--std-color)
+}
+
+.text-gray{
+    color:var(--gray)
+}

@@ -1,0 +1,160 @@
+.about:before{
+    content: "";
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 40%;
+    height: 100%;
+ 
+    background-image: linear-gradient(
+270deg
+,var(--bg),rgba(var(--bg-rgb),0) 90%),linear-gradient(
+180deg
+,var(--bg),rgba(var(--bg-rgb),0) 60%)
+,url('../../Support//Images/firman.jpg');
+    background-repeat: no-repeat;
+    background-position: 50%;
+    background-size: cover;
+    background-color: black;
+}
+
+.std p {
+    margin-bottom: 1rem;
+}
+
+.std .-purple {
+    color: var(--purple);
+}
+ .about-contact, .about-contact li {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    
+
+}
+
+ .about-contact {
+  
+   margin: 2rem  0 ;
+
+
+}
+
+.about-contact a {
+    flex: 0 0 auto;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    
+}
+
+ .about-contact a .ico {
+    flex: 0 0 auto;
+    overflow: visible;
+    width: 1.5rem;
+    height: 1.5rem;
+    stroke: var(--bg);
+    fill: var(--purple);
+    stroke-width: 2px;
+    transition: all .4s ease-out;
+}
+.about-contact li {
+    flex: 0 0 auto;
+    margin: 0 1rem 0 0;
+    color: var(--gray);
+}
+.about-contact a.bt {
+    background: var(--purple);
+    color: var(--bg);
+    padding: 0 1rem;
+    height: 2rem;
+    border-radius: 3rem;
+    margin-left: 1rem;
+    line-height: 2rem;
+}
+.about-contact a.bt .ico {
+    /* margin-left: .5rem; */
+    height: 14px;
+    width: 14px;
+}
+
+
+ .about-grid {
+    padding: 3rem 2rem 0 0;
+    margin-right: -25vw;
+    width: 64.5vw;
+  
+}
+
+.about-grid h2 {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+}
+
+.about-grid .columns {
+    margin-bottom: 2rem;
+}
+
+.about-grid ul {
+    display: grid;
+    grid-template: 1fr/repeat(4,1fr);
+    grid-gap: 2rem;
+    grid-row-gap: 1rem;
+    padding:0
+}
+
+ .about-grid li {
+    list-style: none;
+    margin: 0;
+    font-size: 1rem;
+    line-height: 1.5em;
+    color: var(--gray);
+}
+
+.about-grid .tools {
+    display: grid;
+    grid-template: 1fr/repeat(4,1fr);
+    grid-gap: 2rem;
+    grid-row-gap: 1rem;
+}
+.about-grid .tools ul {
+    display: block;
+}
+
+
+@media screen and (max-width: 1024px){
+.about:before {
+    position: absolute;
+    width: 100%;
+    height: 60vh;
+    background-image: linear-gradient(
+270deg
+,var(--bg),rgba(var(--bg-rgb),0) 80%),linear-gradient(
+0deg
+,var(--bg),rgba(var(--bg-rgb),0) 60%),url('../../Support/Images/firman.jpg');
+}
+
+.about-grid {
+    padding: 3rem 1rem 0 0;
+    margin: 0;
+    width: calc(100vw - 4rem);
+    }
+}
+
+@media screen and (max-width: 568px){
+.about:before {
+    height: 80vh;
+    background-image: linear-gradient(
+270deg
+,var(--bg),rgba(var(--bg-rgb),0) 50%),linear-gradient(
+0deg
+,var(--bg),rgba(var(--bg-rgb),0) 60%),url('../../Support/Images/firman.jpg');
+}
+
+.about .about-grid .tools,.about .about-grid ul {
+    grid-template: 1fr/1fr;
+    grid-gap: 1rem;
+}
+}
+

@@ -1,0 +1,71 @@
+.work-list {
+    margin: 4rem -5vw 0px 0px;
+    padding-right: 1rem;
+}
+
+.work-list li{
+    list-style: none;
+}
+
+
+
+.work-list a {
+    display: flex;
+    align-items: center;
+    color: var(--light);
+    text-decoration: none;
+}
+
+.work-list a .image-container {
+    flex: 0 0 auto;
+    width: 16rem;
+    display: block;
+    margin-right: 1rem;
+    border-radius: 16rem;
+    background-color: var(--purple);
+    overflow: hidden;
+}
+.work-list li {
+    list-style: none;
+    margin: 0px 0px 4rem;
+}
+.work-list a .image-container img{
+    width: 100%;
+    height: 100%;
+    background-size: contain;
+}
+.work-list a strong {
+    color: var(--purple);
+    font-size: 3.5rem;
+    line-height: 1.1;
+}
+@media screen and (max-width: 768px){
+.work-list {
+    margin-right: -4rem;
+    padding-right: 0px;
+}
+.work-list a .image-container {
+    width: 8rem;
+    margin-right: 2rem;
+    
+}
+.work-list a strong {
+    font-size: 2.5rem;
+}
+}
+
+@media screen and (max-width: 568px){
+    .work-list {
+        margin-right: 0px;
+    }
+    .work-list a {
+    display: block;
+}
+.work-list a .image-container {
+    width: 60%;
+    margin: 0px auto 1rem 0px;
+}
+.work-list a strong {
+    font-size: 1.5rem;
+}
+}
