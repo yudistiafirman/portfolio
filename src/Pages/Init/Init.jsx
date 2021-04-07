@@ -27,7 +27,7 @@ function Init() {
 
         window.scrollTo(0,0)
 
-        gsap.registerPlugin(ScrollTrigger,MotionPathPlugin);
+        gsap.registerPlugin(ScrollTrigger);
         gsap.defaults({ease: "none"});
         //line animation
        
@@ -133,32 +133,7 @@ function Init() {
        
 
         //time line animation
-        gsap.set(".ball", {xPercent: -50, yPercent: -50})
-        let tl = gsap.timeline({
-            defaults: {
-              duration: 0.05, 
-              autoAlpha: 1, 
-              scale: 2, 
-              transformOrigin: 'center', 
-              ease: "elastic(2.5, 1)"
-            }})
-          .to(".ball02, .text01", {}, 0.2) 
-          .to(".ball03, .text02", {}, 0.33)
-          .to(".ball04, .text03", {}, 0.46)
-          .to(".ball05, .text04", {}, 0.60)
-          .to(".ball06, .text04", {}, 0.75)
-          
-           gsap.timeline({defaults: {duration: 1},
-            scrollTrigger: {
-              trigger: "#svg",
-              scrub: true,
-              start: "top center",
-              end: "bottom center"
-            }})
-          .to(".ball01", {duration: 0.01, autoAlpha: 1})
-          .from(".theLine", {drawSVG: 0}, 0)
-          .to(".ball01", {motionPath: {path: ".theLine", alignOrigin: [0.5, 0.5]}}, 0)
-          .add(tl, 0);
+       
 
         
 
@@ -179,8 +154,9 @@ function Init() {
           })
           const tableReveal= gsap.timeline({
         scrollTrigger:{
-          trigger:'#timeline',
-      
+          trigger:'#quotes',
+          start:'top center',
+          end:'top top',
           scrub:1
         }
       
@@ -189,7 +165,16 @@ function Init() {
      tableReveal.to('#open',{
       visibility: 'inherit',opacity: 1, transform: 'translate3d(0px, 0px, 0px) scale(1, 1)',
      })
-     tableReveal.to('#open',{scale:0,opacity:0})
+     let hideTable= gsap.timeline({
+       scrollTrigger:{
+         trigger:'#daily',
+         scrub:1,
+         start:'top center',
+         end:'top top',
+       }
+     })
+
+     hideTable.to('#open',{scale:0,opacity:0})
     
 
 
@@ -209,8 +194,9 @@ const triangleTimeline= new TimelineMax({repeat:-1})
           });
 
           const triangleRotation = gsap.timeline({scrollTrigger:{
-            trigger:'#timeline',
-          
+            trigger:'#quotes',
+            start:'top center',
+            end:'top top',
             scrub:1
            
           }})       
@@ -218,10 +204,18 @@ const triangleTimeline= new TimelineMax({repeat:-1})
             triangleRotation.to('#smart',{
                 visibility: 'inherit', opacity: '0.999962', transform: 'translate3d(0px, 0px, 0px) scale(1, 1)'
               })
-            triangleRotation.to('#smart',{
-              scale:0,opacity:0
-            })
-                    
+        
+              let hideTriangle= gsap.timeline({
+                scrollTrigger:{
+                  trigger:'#daily',
+                  scrub:1,
+                  start:'top center',
+                  end:'top top',
+                }
+              })
+              hideTriangle.to('#smart',{
+                scale:0 , opacity:0,
+              })
    //coffee animation
 
               const coffeeAnimation=new TimelineMax({repeat:-1})
@@ -948,43 +942,8 @@ hideBG.to('.sky_2',{
                    <div className="gap"/>
 
                     {/* Draw timeline sections */}
-                        <section  id="timeline">
-                        <svg id="svg" xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 600 1200">
-                                <path class="line01 line" d="M 10 200  600 200" ></path>
-                                <path class="line02 line" d="M 10 400  600 400" ></path>
-                                <path class="line03 line" d="M 10 600  600 600" ></path>
-                                <path class="line04 line" d="M 10 800  600 800" ></path>
-                                <path class="line05 line" d="M 10 1000  600 1000" ></path>
-                               
-                                <text class="text01 " x="60" y="190">2015-2017</text>
-                                <text class="text01 " style={{fill:'#dbdbdb'}}  x="370" y="190">IHG Hotel Dubai</text>
-                                <text class="text02" x="60" y="390">2017-2020</text>
-                                <text class="text02 " style={{fill:'#dbdbdb'}}  x="420" y="390">Norwegian Cruise </text>
-                                <text class="text03" x="55" y="590">27 june 2020</text>
-                                <text class="text03 " style={{fill:'#dbdbdb'}}  x="300" y="590">Joining Purwadhika </text>
-                                <text class="text04" x="30" y="790">2021</text>
-                                <text class="text04 " style={{fill:'#dbdbdb'}}  x="280" y="790">Starting My Journey As Programmers </text>
-                                <text class="text05" x="30" y="790"></text>
-
-                                <path class="theLine" 
-                                        d="M -5,0
-                                        Q 450 230 300 450 
-                                        T 130 750
-                                        Q 100 850 300 1000
-                                        T 80 1150"
-                                        fill="none" stroke="white" stroke-width="10px" />
-                                
-                                <circle class="ball ball01" r="20" cx="25" cy="25"></circle>
-                                <circle class="ball ball02" r="20" cx="298" cy="221"></circle>
-                                <circle class="ball ball03" r="20" cx="347" cy="419"></circle>
-                                <circle class="ball ball04" r="20" cx="223" cy="621"></circle>
-                                <circle class="ball ball05" r="20" cx="150" cy="821"></circle>
-                                <circle class="ball ball06" r="20" cx="310" cy="1021"></circle>
-
-                                </svg>
-                        </section>
-                     
-                      <div className="gap"/>
+                        
+                      
 
                     {/* tom bilyeu quotes */}
                              <section className="scene pt-5" id="quotes"> 
