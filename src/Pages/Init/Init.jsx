@@ -1,4 +1,4 @@
-import React, { useEffect,useState } from 'react'
+import React, { useEffect} from 'react'
 import gsap from 'gsap'
 import { ScrollTrigger, TweenMax}from 'gsap/all'
 import './Init.css'
@@ -148,7 +148,7 @@ function Init() {
           .to(".ball05, .text04", {}, 0.60)
           .to(".ball06, .text04", {}, 0.75)
           
-          let action = gsap.timeline({defaults: {duration: 1},
+           gsap.timeline({defaults: {duration: 1},
             scrollTrigger: {
               trigger: "#svg",
               scrub: true,
@@ -323,7 +323,7 @@ const triangleTimeline= new TimelineMax({repeat:-1})
 
               //astro left leg animation
 
-              const astroLeftLeg= TweenMax.to('.astro-l-leg',{
+              TweenMax.to('.astro-l-leg',{
                 rotation:'-=30',
                 repeat:-1,
                 yoyo:true,
@@ -332,7 +332,7 @@ const triangleTimeline= new TimelineMax({repeat:-1})
 
               //astro right leg 
 
-              const astroRightLeg= TweenMax.to('.astro-r-leg',{
+       TweenMax.to('.astro-r-leg',{
                 rotation:'+=15',
                 repeat:-1,
                 yoyo:true,
@@ -341,7 +341,7 @@ const triangleTimeline= new TimelineMax({repeat:-1})
 
               //astro body
 
-              const astroBody= TweenMax.to('.astro-body',{
+            TweenMax.to('.astro-body',{
                 rotation:'-=5',
                 repeat:-1,
                 yoyo:true,
@@ -402,7 +402,7 @@ const triangleTimeline= new TimelineMax({repeat:-1})
 
 
                 //dino head animation 
-              const dinoHead = TweenMax.to('.dino-head',{
+          TweenMax.to('.dino-head',{
                 rotation:'+=10',
                 repeat:-1,
                 yoyo:true,
@@ -411,7 +411,7 @@ const triangleTimeline= new TimelineMax({repeat:-1})
 
               //dino tail animation
 
-              const dinoTail = TweenMax.to('.dino-tail',{
+             TweenMax.to('.dino-tail',{
                 rotation:'+=10',
                 repeat:-1,
                 yoyo:true,
@@ -420,7 +420,7 @@ const triangleTimeline= new TimelineMax({repeat:-1})
               
               //dino left leg animation
 
-              const dinoLeg= TweenMax.to('.dino-l-leg',{
+          TweenMax.to('.dino-l-leg',{
                     rotation:"+=15",
                     repeat:-1,
                     yoyo:true,
@@ -428,8 +428,7 @@ const triangleTimeline= new TimelineMax({repeat:-1})
               })
 
               //dino right leg animation
-
-              const dinoRLeg= TweenMax.to('.dino-r-leg',{
+       TweenMax.to('.dino-r-leg',{
                 rotation:"-=15",
                 repeat:-1,
                 yoyo:true,
@@ -438,14 +437,14 @@ const triangleTimeline= new TimelineMax({repeat:-1})
 
               //dino left hand
 
-              const dinoLhand= TweenMax.to('.dino-l-arm',{
+           TweenMax.to('.dino-l-arm',{
                 y:'+=5',
                 repeat:-1,
                 yoyo:true,
                 duration:1
               })
               //dino r hand
-              const dinoRhand= TweenMax.to('.dino-r-arm',{
+              TweenMax.to('.dino-r-arm',{
                 rotation:'+=5',
                 repeat:-1,
                 yoyo:true,
@@ -454,7 +453,7 @@ const triangleTimeline= new TimelineMax({repeat:-1})
 
               //dino headphone
 
-              const dinoHeadPhone= TweenMax.to('.dino-headphone',{
+      TweenMax.to('.dino-headphone',{
                 scale:1.1,
                 repeat:-1,
                 yoyo:true,
@@ -674,12 +673,12 @@ showCode.to('.lines',{
 
 // cloud in sections codedecs
 
-let cloud_1=TweenMax.set('.c1',{
+TweenMax.set('.c1',{
   xPercent:0,
   yPercent:50
 })
 
-let cloud_2=TweenMax.set('.c2',{
+TweenMax.set('.c2',{
   xPercent:80,
   yPercent:50,
 
@@ -1007,7 +1006,7 @@ hideBG.to('.sky_2',{
                                 <p className="big text-light">Throughtout this year i have been challenging myself 
                                     <b className="text-primary"> by developing web and mobile apps that i've never developed before</b><b className="text-light">.</b>
                                    </p>
-                                    <p className="text-light"> as well as sharpening my problem solving skill by solving every single challenge from <a style={{cursor:'pointer'}} className="text-primary">www.codewars.com</a>  </p>
+                                    <p className="text-light"> as well as sharpening my problem solving skill by solving every single challenge from <a style={{cursor:'pointer'}} href="www.codewars.com" className="text-primary">www.codewars.com</a>  </p>
                                 </div>
                                     
                                 </div>
@@ -1031,7 +1030,7 @@ hideBG.to('.sky_2',{
 
                     <section className="scene" id="earlydays">
                                    <div id="t-container" className="title-container" style={{visibility:'hidden',opacity:0}} >
-                                    <h1 id="early" style={{ visibility: 'hidden', opacity: 0, transform: 'translate(0%, -50%) matrix3d(1, 0, 0, 0, 0, 0, 1, 0, 0, -1, 0, 0, 0, -100, -100, 1)',transformOrigin: '50% 50% 0px'}} className="text-light" className="title">Early Days(<span className="text-primary">2015,2020</span>)</h1>
+                                    <h1 id="early" style={{ visibility: 'hidden', opacity: 0, transform: 'translate(0%, -50%) matrix3d(1, 0, 0, 0, 0, 0, 1, 0, 0, -1, 0, 0, 0, -100, -100, 1)',transformOrigin: '50% 50% 0px'}} className="text-light title">Early Days(<span className="text-primary">2015,2020</span>)</h1>
                                      <p id='table-yes' style={{ visibility: 'hidden', opacity: 0, transform: 'translate(0%, -50%) matrix3d(1, 0, 0, 0, 0, 0, -1, 0, 0, 1, 0, 0, 0, 100, -100, 1)',transformOrigin: '50% 50% 0px'}} className="std text-std">{`<table+yes>`}</p>
                                      <div class="clouds  cloud-1" style={{transform: 'translate(20%, 50%) matrix(1, 0, 0, 1, -1095, -521)'}}></div>
 
@@ -1157,7 +1156,7 @@ hideBG.to('.sky_2',{
                           </h1>
                           <div class="std">
                           <p class="-gray">
-                           /*<br/>
+                          {`/*`}<br/>
                              - Close your eyes. What do you hear?<br/><span class="-answer">- I hear the water, I hear the birds.</span><br/>
                              - Do you hear your own heartbeat?<br/><span class="-answer">- No.</span><br/>
                              - Do you hear the grasshopper which is at your feet?<br/><span class="-answer">- Old man, how is it that you hear these things?</span><br/>
@@ -1201,14 +1200,14 @@ hideBG.to('.sky_2',{
                       </g>
                       </svg>
                       <div class="madeof">
-                      <p class="-comment">// Made with</p>
+                      <p class="-comment">{'// Made with'}</p>
                       <div class="cols">
                         <ul class="col">
                         <li class="ico">&lt;/&gt;</li><li>React.js</li><li>GSAP</li><li>ScrollTrigger</li><li>Photoshop</li></ul>
                         <ul class="col"><li class="ico">~</li><li>+320h of thinking</li><li>+76 hours of code</li><li>+72 cups of coffee</li><li>+24 hours learning GSAP</li><li>4 packages Gudang Garam Merah</li></ul>
                    </div></div>
              <p className="text-light">
-                Thanks for checking my website!<br/><span class="-comment">// It's a work in progress so check back often!</span></p>
+                Thanks for checking my website!<br/><span class="-comment">{`// It's a work in progress so check back often!`}</span></p>
               <p class="big text-light">
                 Check out my <a href="/projects" class="text-primary" title="Work">selected projects</a> for more details.
             </p>

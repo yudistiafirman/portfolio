@@ -4,9 +4,6 @@ import '../Init/Init.css'
 import { useEffect } from 'react'
 import { TimelineMax } from 'gsap/gsap-core'
 import { TweenMax } from 'gsap/all'
-import Cv from  '../../files/yudistiafirman.pdf'
-import { Link } from 'react-router-dom'
-import axios from 'axios'
 
 
 
@@ -173,7 +170,7 @@ function About() {
                                             <div className="columns Languages">
                                             <ul>
                                                     <li>
-                                                        <span className="-comment">//Fluent</span>
+                                                        <span className="-comment">{'//Fluent'}</span>
                                                         <br/>
                                                       <i className="text-primary italic">en-US</i> English
                                                         <br/>
@@ -182,14 +179,14 @@ function About() {
                                                       <i className="text-primary italic">id-SU</i> Sundanase
                                                     </li>
                                                     <li>
-                                                        <span className="-comment">//Intermediete</span>
+                                                        <span className="-comment">{'//Intermediete'}</span>
                                                         <br/>
                                                       <i className="text-primary italic">ms-MAY</i> Melayu
                                                         <br/>
                                                        
                                                     </li>
                                                     <li>
-                                                        <span className="-comment">//Basic</span>
+                                                        <span className="-comment">{'//Basic'}</span>
                                                         <br/>
                                                       <i className="text-primary italic">ja-JPN</i> Japanese
                                                         <br/>

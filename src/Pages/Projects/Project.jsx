@@ -78,7 +78,7 @@ export default function Project() {
                                             <li>
                                                 <a href="https://github.com/yudistiafirman/Pejoy.com-Fe-Reborn">
                                                   <div style={{backgroundColor:"var(--purple)",borderRadius:'5px'}} className="image-container">
-                                                  <img src={PejoyLogo}  href="#"/>
+                                                  <img src={PejoyLogo}  alt="#"/>
                                                   </div>
                                             
                                                   <div class="details">
@@ -93,7 +93,7 @@ export default function Project() {
 
                                             <a href="https://github.com/yudistiafirman/DailyGadget-React-Native-App">
                                             <div className="image-container">
-                                                  <img src={Pman} href="#"/>
+                                                  <img src={Pman} alt="#"/>
                                                   </div>
                                                   <div class="details">
                                                     <strong>Daily Gadget</strong><br/>
@@ -107,7 +107,7 @@ export default function Project() {
 
                                             <a href="https://github.com/yudistiafirman/Hoteloka-React-native-apps">
                                             <div className="image-container">
-                                                  <img src={Hoteloka} href="#"/>
+                                                  <img src={Hoteloka} alt="#"/>
                                                   </div>
                                                   <div class="details">
                                                     <strong>Hoteloka</strong><br/>
