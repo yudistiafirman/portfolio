@@ -4,7 +4,7 @@ import { ScrollTrigger, TweenMax}from 'gsap/all'
 import './Init.css'
 
 
-import MotionPathPlugin from 'gsap/MotionPathPlugin'
+
 import { TimelineMax } from 'gsap/gsap-core';
 
 
